@@ -1,0 +1,228 @@
+# ===============================================================================
+# MineGlot - Translation Mod for Minecraft 1.8.9
+# Language File: English (US)
+# USER INTERFACE ONLY - Technical logs are hardcoded in Java classes
+# ===============================================================================
+
+# --- MOD INFORMATION ---
+mod.name=MineGlot
+
+# --- USER ERRORS (displayed to players) ---
+error.unknown=Unknown error occurred
+error.api=API error: %s
+error.api.timeout=API timeout
+error.api.rate_limit=API rate limit reached
+error.api.invalid_key=Invalid API key
+error.api.server_error=API server error (500-599)
+error.api.client_error=API client error (400-499)
+error.api.network_error=Network error when connecting to API
+error.api.parsing_error=Error processing API response
+error.api.quota_exceeded=API quota exceeded - Please wait
+error.api.service_unavailable=API service temporarily unavailable
+error.config=Configuration error: %s
+error.translation=Translation error occurred
+error.ui=User interface error: %s
+error.rendering=Rendering error: %s
+error.system=System error: %s
+error.database=Database error: %s
+
+# --- USER VALIDATION ---
+
+# --- TRANSLATION MESSAGES (shown to players) ---
+translation.progress=Translating...
+translation.loading=Loading...
+
+translation.command.missing_text=No text to translate. Usage: /trs <text>, /translate <text>, or /trs <player> <text>
+translation.error.empty=Error: Empty message
+translation.error.too_long=Error: Message too long (maximum %d characters)
+translation.error.processing=Error during translation processing
+translation.error.general=Translation error occurred
+
+# --- COMMANDS (user-facing) ---
+command.trs_clear.success=Translation removed from cache: %s
+command.trs_clear.not_available=Command /trs-clear not available. Use /trs first
+command.trs_clear.no_translation=No recent translation found
+command.trs_clear.failed=Failed to remove translation
+command.trs_clear.error=Error removing translation
+command.error.general=Error while running the command
+command.error.not_found=§cNot found: %s
+command.success=§aOperation successful
+
+# --- TARGET PLAYERS COMMANDS ---
+
+# --- USER INTERFACE ---
+gui.title=Configuration
+gui.back=Back
+gui.language=Language
+gui.language_description=Change the mod interface language
+gui.sign_translation=Sign Translation
+gui.sign_translation_description=Enable/disable automatic sign translation
+gui.click_to_toggle=Click to toggle
+
+# --- BUTTONS ---
+button.show=Show
+button.hide=Hide
+button.clear=Clear
+button.save=Save
+
+# --- MAIN MENU ---
+menu.title=MineGlot
+menu.cache_stats=Statistics
+menu.language=Language
+menu.default_language=Default Language
+menu.target_players=Target Players
+menu.model=Model
+menu.configuration=Configuration
+menu.help=Help
+menu.api_key=API Key
+menu.github=GitHub
+menu.donate=Donate
+
+# --- TARGET PLAYERS GUI ---
+target.title=Select Player
+target.reset=Reset
+target.limit=Player limit reached
+target.remove=Click on a player to deselect them
+gui.target.reset=Reset
+
+# --- SEARCH ---
+
+# --- API KEYS ---
+api_key.title=API Key
+api_key.please_wait=Please wait...
+api_key.testing=Testing API key...
+api_key.save_success=API key saved successfully
+api_key.save_error=Error: Failed to save API key
+api_key.test_success=API key validated successfully
+api_key.test_error=Error: API key test failed
+api_key.cleared=API key cleared
+api_key.clear_error=Error: Failed to clear API key
+api_key.hold_to_clear=Hold to clear
+api.error.empty=Error: API key cannot be empty
+api.error.too_short=Error: API key is too short
+api.error.unsupported_engine=Error: Unsupported AI engine
+api.error.invalid_format=Error: Invalid API key format
+
+# --- CACHE (user-visible messages only) ---
+cache.title=Statistics
+cache.clear=Clear Cache
+cache.clear_success=§aCache cleared successfully
+
+# --- LANGUAGE SYSTEM ---
+language.title=Language
+language.default=Default Language
+language.code=Code
+language.default_set=§aDefault language: §e%s
+language.selected=§aLanguage selected: §e%s
+
+# --- MODEL SYSTEM ---
+model.title=Model
+model.selected=§aModel selected: §e%s
+
+# --- CREDITS SYSTEM ---
+credits.title=OpenAI Credits
+
+# --- CONFIGURATION ---
+config.option.enabled=§aEnabled
+config.option.disabled=§cDisabled
+config.option_changed=§a%s: %s
+
+# --- HELP SYSTEM ---
+help.title=Help
+
+# --- LANGUAGE COMMANDS ---
+
+
+
+# --- AUTHOR INFORMATION ---
+author.title= Author
+
+# --- AUTHOR COMMANDS ---
+author.profile_banner=§8§m          §r §6§l· Author · MineGlot ·§r §8§m          §r
+author.profile_name=§7  §eName §8┃ §f%s
+author.profile_username=§7  §eGitHub §8┃ §9%s
+author.profile_about_title=§7  §b§lAbout
+author.profile_about_line1=§7    §fMinecraft Forge 1.8.9 developer
+author.profile_about_line2=§7    §fCreator of MineGlot — in-game AI chat translation
+author.profile_about_line3=§7    §fPassionate about multilingual servers
+author.profile_footer=§8§m────────────────────────────────
+
+# ===============================================================================
+# End of MineGlot Language File - USER INTERFACE ONLY
+# ===============================================================================
+
+# --- GITHUB ---
+
+# --- CHAT TRANSLATION ---
+
+# --- SIGN TRANSLATION ---
+sign.label=Sign
+sign.cooldown=Please wait before translating this sign again.
+sign.empty=This sign is empty.
+sign.translating=Translating: "%s"
+sign.failed=Sign translation failed.
+
+# --- TRANSLATION ERRORS ---
+translation.error.empty_result=Error: Empty translation received
+
+# --- EXPORT ---
+export.success=§a✅ Report exported: §e%s
+export.location=§7📁 Folder: §e%s
+
+# --- CACHE STATS ---
+cache.guava_format=§7Guava Cache: §e%d §7entries
+cache.rocksdb_format=§7RocksDB Cache: §e%d §7entries
+cache.success_rate_format=§7Success rate: §e%.1f%%
+cache.memory_format=§7Memory usage: §e%.1f MB
+cache.hit_miss_format=§7⚡ Hits: §a%d §7✘ Misses: §c%d
+cache.rocksdb_error=§cRocksDB stats error
+cache.display_error=§cError displaying statistics
+cache.service_unavailable=§cCache service unavailable
+
+# --- CHAT SELECTION ---
+chat.selection_ending=§e⚠ Selection mode ends in 5 seconds...
+chat.selection_activated=§aSelection mode activated for 30 seconds. Open chat and click a visible or new message to translate it.
+chat.selection_deactivated=§cSelection mode deactivated.
+
+# --- TARGET COMMAND HELP ---
+
+# ===============================================================================
+# End of MineGlot Language File - USER INTERFACE ONLY
+# ===============================================================================
+
+# --- TARGET PLAYER ALIASES (for GUI/command unification) ---
+target.player_added=§aPlayer %s added to targets
+target.player_removed=§cPlayer %s removed from targets
+player.not_found=§cPlayer not found: %s
+target.already_targeted=§e%s is already targeted
+target.not_targeted=§e%s is not targeted
+target.add_failed=§cCould not add %s to targets
+target.remove_failed=§cCould not remove %s from targets
+target.list_cleared=§aList cleared (%d players)
+target.list_empty=§eNo targeted players
+
+# --- RUNTIME VALIDATION / SERVICE KEYS ---
+chat.error.empty=Chat message cannot be empty
+chat.error.too_long=Chat message is too long
+command.error.player_only=This command can only be used by a player
+command.technical_message=Technical details: %s
+config.error.general=Configuration error
+config.error.no_default_lang=No default language configured
+config.error.no_api_key=No API key configured
+config.error.invalid_api_key=Invalid API key
+conversation.error.too_long=Conversation message is too long
+conversation.error.too_short=Conversation message is too short
+db.error.empty=Database path cannot be empty
+engine.error.empty=Engine name cannot be empty
+export.invalid_period=Invalid period. Use: daily, weekly, or monthly
+model.not_found=Selected model not found
+player.error.bot_detected=Invalid player name (bot pattern detected)
+player.error.empty=Player name cannot be empty
+player.error.invalid_chars=Player name contains invalid characters
+player.error.invalid_length=Player name must be between 3 and 16 characters
+service.config_unavailable=Configuration service unavailable
+service.dup=Service already registered
+service.empty=Service name is empty
+service.null=Service is null
+service.unavailable=Service unavailable
+target.limit_reached=Target player limit reached

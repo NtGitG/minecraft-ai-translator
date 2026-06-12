@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "usage": "/translate <text>",
+      "description": "Translates the provided text"
+    },
+    {
+      "usage": "/trs <text>",
+      "description": "Quick alias for /translate"
+    },
+    {
+      "usage": "/translation [text]",
+      "description": "Translates text or lets you click an already visible or incoming chat message"
+    },
+    {
+      "usage": "/trs-clear",
+      "description": "Removes the last translation from cache"
+    },
+    {
+      "usage": "/transexport [daily|weekly|monthly]",
+      "description": "Exports your personal usage statistics"
+    },
+    {
+      "usage": "/author",
+      "description": "Displays information about the mod author"
+    }
+  ]
+}

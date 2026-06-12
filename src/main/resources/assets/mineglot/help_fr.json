@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "usage": "/translate <texte>",
+      "description": "Traduit le texte fourni"
+    },
+    {
+      "usage": "/trs <texte>",
+      "description": "Alias rapide de /translate"
+    },
+    {
+      "usage": "/translation [texte]",
+      "description": "Traduit un texte ou permet de cliquer un message deja visible ou entrant"
+    },
+    {
+      "usage": "/trs-clear",
+      "description": "Supprime la derni\u00e8re traduction du cache"
+    },
+    {
+      "usage": "/transexport [daily|weekly|monthly]",
+      "description": "Exporte vos statistiques personnelles d'usage"
+    },
+    {
+      "usage": "/author",
+      "description": "Affiche les informations sur l'auteur du mod"
+    }
+  ]
+}

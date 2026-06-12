@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "usage": "/translate <text>",
+      "description": "指定したテキストを翻訳します"
+    },
+    {
+      "usage": "/trs <text>",
+      "description": "/translate の短いエイリアスです"
+    },
+    {
+      "usage": "/translation [text]",
+      "description": "テキストを翻訳するか、翻訳するメッセージを選択します"
+    },
+    {
+      "usage": "/trs-clear",
+      "description": "最後の翻訳をキャッシュから削除します"
+    },
+    {
+      "usage": "/transexport [daily|weekly|monthly]",
+      "description": "個人の使用統計をエクスポートします"
+    },
+    {
+      "usage": "/author",
+      "description": "MOD作者の情報を表示します"
+    }
+  ]
+}

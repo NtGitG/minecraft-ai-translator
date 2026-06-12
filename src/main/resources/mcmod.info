@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "mineglot",
+    "name": "MineGlot",
+    "description": "MineGlot - Traduction IA en Temps Reel pour Minecraft\n\nFONCTIONNALITES PRINCIPALES :\n- Traduction instantanee des messages du chat avec OpenAI ou Claude\n- Support IA cible : OpenAI GPT et Anthropic Claude\n- Interface HUD elegante avec affichage des langues source/cible\n- Traduction des panneaux\n- Suivi avance des tokens utilises\n\nCOMMANDES PRINCIPALES :\n- /translate <texte> - Traduit instantanement un texte\n- /trs <texte> - Alias rapide de /translate\n- /translation [texte] - Traduit un texte ou active la selection de message\n- /trs-clear - Supprime la derniere traduction du cache\n- /transexport [daily|weekly|monthly] - Exporte les statistiques d'utilisation\n- /author - Affiche les informations sur l'auteur\n\nPARFAIT POUR :\n- Serveurs multilingues internationaux\n- Communication cross-culturelle\n- Apprentissage des langues en jouant\n- Accessibilite linguistique\n\nCONFIGURATION FACILE :\n- Interface graphique intuitive\n- Validation automatique des cles API\n- Cache intelligent pour reduire les appels API repetes\n- Compatible client-side uniquement (aucune installation serveur requise)",
+    "version": "1.0.2",
+    "mcversion": "1.8.9",
+    "url": "https://github.com/NtGitG/minecraft-ai-translator",
+    "updateUrl": "https://github.com/NtGitG/minecraft-ai-translator/releases/latest",
+    "authorList": ["NtGitG"],
+    "credits": "Developpe par NtGitG | Propulse par OpenAI GPT et Anthropic Claude | Remerciements speciaux a la communaute Minecraft Forge",
+    "logoFile": "assets/mineglot/logo.png",
+    "screenshots": [
+    ],
+    "dependencies": ["forge@[11.15.1.2318,)"]
+  }
+]

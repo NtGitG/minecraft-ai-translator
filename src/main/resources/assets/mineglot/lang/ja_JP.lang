@@ -1,0 +1,225 @@
+# ===============================================================================
+# MineGlot - マインクラフト 1.8.9 用翻訳 MOD
+# 言語ファイル : 日本語 (JP)
+# ユーザーインターフェースのみ － 技術ログは Java クラス内にハードコーディングされています
+# ===============================================================================
+
+# --- MOD 情報 ---
+mod.name=MineGlot
+
+# --- ユーザーエラー（プレイヤーに表示） ---
+error.unknown=不明なエラーが発生しました
+error.api=API エラー: %s
+error.api.timeout=API のタイムアウト
+error.api.rate_limit=リクエストの上限に達しました
+error.api.invalid_key=無効な API キー
+error.api.server_error=API サーバーエラー (500-599)
+error.api.client_error=API クライアントエラー (400-499)
+error.api.network_error=API 接続時のネットワークエラー
+error.api.parsing_error=API 応答の解析エラー
+error.api.quota_exceeded=API クォータ超過 - しばらく待ってください
+error.api.service_unavailable=API サービスは一時的に利用できません
+error.config=設定エラー: %s
+error.translation=翻訳中にエラーが発生しました
+error.ui=ユーザーインターフェースエラー: %s
+error.rendering=レンダリングエラー: %s
+error.system=システムエラー: %s
+error.database=データベースエラー: %s
+
+# --- ユーザーバリデーション ---
+
+# --- 翻訳メッセージ（プレイヤーに表示） ---
+translation.progress=翻訳中...
+translation.loading=読み込み中...
+
+translation.command.missing_text=翻訳するテキストがありません。使用方法: /trs <text>, /translate <text>, または /trs <player> <text>
+translation.error.empty=エラー: メッセージが空です
+translation.error.too_long=エラー: メッセージが長すぎます（最大 %d 文字）
+translation.error.processing=翻訳処理中にエラーが発生しました
+translation.error.general=翻訳エラーが発生しました
+
+# --- 本の翻訳 ---
+
+# --- コマンド（UI） ---
+command.error.general=コマンドの実行中にエラーが発生しました
+command.error.not_found=§c見つかりません : %s
+command.success=§a操作が成功しました
+
+# --- ターゲットプレイヤーコマンド ---
+
+# --- ユーザーインターフェース ---
+gui.title=設定
+gui.back=戻る
+gui.language=言語
+gui.language_description=MOD の UI 言語を変更
+gui.sign_translation=看板翻訳
+gui.sign_translation_description=看板の自動翻訳を切り替え
+gui.click_to_toggle=クリックして切替
+
+# --- ボタン ---
+button.show=表示
+button.hide=非表示
+button.clear=クリア
+button.save=保存
+
+# --- メインメニュー ---
+menu.title=MineGlot
+menu.cache_stats=キャッシュ統計
+menu.language=言語
+menu.default_language=デフォルト言語
+menu.target_players=翻訳ターゲット
+menu.model=モデル
+menu.configuration=設定
+menu.help=ヘルプ
+menu.api_key=API キー
+menu.github=GitHub
+menu.donate=寄付
+
+# --- ターゲットプレイヤー UI ---
+target.title=プレイヤーを選択
+target.reset=リセット
+target.limit=プレイヤー上限に達しました
+target.remove=クリックでターゲット解除
+gui.target.reset=リセット
+
+# --- 検索 ---
+
+# --- API キー ---
+api_key.title=API キー
+api_key.please_wait=お待ちください...
+api_key.testing=API キーをテスト中...
+api_key.save_success=API キーを保存しました
+api_key.save_error=Error: Failed to save API key
+api_key.test_success=API キーが有効です
+api_key.test_error=Error: API key test failed
+api_key.cleared=API キーを削除しました
+api_key.clear_error=Error: Failed to clear API key
+api_key.hold_to_clear=長押しで削除
+api.error.empty=Error: API key cannot be empty
+api.error.too_short=Error: API key is too short
+api.error.unsupported_engine=Error: Unsupported AI engine
+api.error.invalid_format=Error: Invalid API key format
+
+# --- キャッシュ（ユーザー可視メッセージのみ） ---
+cache.title=キャッシュ統計
+cache.clear=キャッシュをクリア
+cache.clear_success=§aキャッシュをクリアしました
+
+# --- 言語システム ---
+language.title=言語
+language.default=デフォルト言語
+language.code=コード
+language.default_set=§aデフォルト言語 : §e%s
+language.selected=§a選択言語 : §e%s
+
+
+# --- モデルシステム ---
+model.title=モデル
+model.selected=§a選択モデル : §e%s
+
+
+# --- クレジットシステム ---
+credits.title=OpenAI クレジット
+
+
+# --- 設定 ---
+config.option.enabled=§a有効
+config.option.disabled=§c無効
+config.option_changed=§a%s : %s
+
+# --- ヘルプシステム ---
+help.title=ヘルプ
+
+# --- 言語コマンド ---
+
+
+
+# --- 作者情報 ---
+author.title=作者
+
+# --- 作者コマンド ---
+author.profile_banner=§8§m          §r §6§l· 作者 · MineGlot ·§r §8§m          §r
+author.profile_name=§7  §e名前 §8┃ §f%s
+author.profile_username=§7  §eGitHub §8┃ §9%s
+author.profile_about_title=§7  §b§l自己紹介
+author.profile_about_line1=§7    §fMinecraft Forge 1.8.9 開発者
+author.profile_about_line2=§7    §fMineGlot 作者 — ゲーム内 AI チャット翻訳
+author.profile_about_line3=§7    §f多言語サーバーと Mod 制作が好き
+author.profile_footer=§8§m────────────────────────────────
+
+# ===============================================================================
+# MineGlot 言語ファイル終端 － ユーザーインターフェースのみ
+# ===============================================================================
+
+# --- GITHUB ---
+
+# --- チャット翻訳 ---
+
+# --- 看板翻訳 ---
+sign.label=看板
+sign.cooldown=再度この看板を翻訳する前にお待ちください。
+sign.empty=この看板は空です。
+sign.translating=翻訳中: "%s"
+sign.failed=看板の翻訳に失敗しました。
+
+# --- 翻訳エラー ---
+translation.error.empty_result=エラー: 空の翻訳結果を受信しました
+
+# --- ターゲットプレイヤー用エイリアス (GUI/コマンド統一用) ---
+target.player_added=§aプレイヤー %s をターゲットに追加しました
+target.player_removed=§cプレイヤー %s をターゲットから除外しました
+player.not_found=§cプレイヤーが見つかりません: %s
+target.already_targeted=§e%s はすでにターゲットです
+target.not_targeted=§e%s はターゲットに含まれていません
+target.add_failed=§c%s をターゲットに追加できませんでした
+target.remove_failed=§c%s をターゲットから削除できませんでした
+target.list_cleared=§aリストをクリアしました（%d 人）
+target.list_empty=§eターゲットプレイヤーがいません
+
+# --- RUNTIME VALIDATION / SERVICE KEYS ---
+chat.error.empty=チャットメッセージは空にできません
+chat.error.too_long=チャットメッセージが長すぎます
+command.error.player_only=このコマンドはプレイヤーのみ使用できます
+command.technical_message=技術詳細: %s
+config.error.general=設定エラー
+config.error.no_default_lang=デフォルト言語が設定されていません
+config.error.no_api_key=No API key configured
+config.error.invalid_api_key=Invalid API key
+conversation.error.too_long=会話メッセージが長すぎます
+conversation.error.too_short=会話メッセージが短すぎます
+db.error.empty=データベースパスを空にできません
+engine.error.empty=エンジン名を空にできません
+export.invalid_period=期間が無効です。day, week, month, all を使用してください
+model.not_found=選択されたモデルが見つかりません
+player.error.bot_detected=無効なプレイヤー名です（botパターンを検出）
+player.error.empty=プレイヤー名を空にできません
+player.error.invalid_chars=プレイヤー名に無効な文字が含まれています
+player.error.invalid_length=プレイヤー名は3から16文字で入力してください
+service.config_unavailable=設定サービスを利用できません
+service.dup=サービスは既に登録されています
+service.empty=サービス名が空です
+service.null=サービスが null です
+service.unavailable=サービスを利用できません
+target.limit_reached=ターゲットプレイヤー上限に達しました
+
+# --- CACHE STATS (en cohérence avec en_US) ---
+cache.guava_format=§7Guava キャッシュ: §e%d §7件
+cache.rocksdb_format=§7RocksDB キャッシュ: §e%d §7件
+cache.success_rate_format=§7成功率: §e%.1f%%
+cache.memory_format=§7メモリ使用量: §e%.1f MB
+cache.hit_miss_format=§7⚡ ヒット: §a%d §7✘ ミス: §c%d
+cache.rocksdb_error=§cRocksDB 統計の取得中にエラーが発生しました
+
+# --- MISSING KEYS (COMPLETENESS) ---
+cache.display_error=§c統計情報の表示中にエラーが発生しました
+cache.service_unavailable=§cキャッシュサービスを利用できません
+chat.selection_activated=§a選択モードを30秒間有効化しました。翻訳したいメッセージをクリックしてください。
+chat.selection_deactivated=§c選択モードを無効化しました。
+chat.selection_ending=§e⚠ 選択モードは5秒後に終了します...
+command.trs_clear.success=キャッシュから翻訳を削除しました: %s
+command.trs_clear.not_available=コマンド /trs-clear は利用できません。先に /trs を使用してください
+command.trs_clear.no_translation=直近の翻訳が見つかりません
+command.trs_clear.failed=翻訳の削除に失敗しました
+command.trs_clear.error=翻訳削除中にエラーが発生しました
+export.location=§7📁 フォルダー: §e%s
+export.success=§a✅ レポートを出力しました: §e%s

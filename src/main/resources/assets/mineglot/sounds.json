@@ -1,0 +1,18 @@
+{
+  "click": {
+    "category": "master",
+    "sounds": ["click"]
+  },
+  "hover": {
+    "category": "master",
+    "sounds": ["hover"]
+  },
+  "success": {
+    "category": "master",
+    "sounds": ["success"]
+  },
+  "error": {
+    "category": "master",
+    "sounds": ["error"]
+  }
+}
