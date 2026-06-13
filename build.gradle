@@ -70,7 +70,7 @@ dependencies {
 
     /* Lingua + ICU + JTokkit (relocaté) */
     shadow  'com.github.pemistahl:lingua:1.2.2'
-    shadow  'com.ibm.icu:icu4j:58.2'
+    shadow  'com.ibm.icu:icu4j:78.3'
     shadow  'com.knuddels:jtokkit:1.1.0'   // Java 8 + module-info Java 16
 
     /* Tests */
