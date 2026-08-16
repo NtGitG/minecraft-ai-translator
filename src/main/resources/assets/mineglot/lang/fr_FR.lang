@@ -1,0 +1,234 @@
+# ===============================================================================
+# MineGlot - Mod de Traduction pour Minecraft 1.8.9
+# Fichier de Langue : Français (FR)
+# INTERFACE UTILISATEUR UNIQUEMENT - Les logs techniques sont codés en dur dans les classes Java
+# ===============================================================================
+
+# --- INFORMATIONS DU MOD ---
+mod.name=MineGlot
+
+# --- MISE A JOUR ---
+gui.update.title=Nouvelle version de MineGlot
+gui.update.available=Une mise à jour est disponible.
+gui.update.current_version=Version actuelle : %s
+gui.update.latest_version=Nouvelle version : %s
+gui.update.browser_notice=La page officielle va s'ouvrir dans votre navigateur.
+gui.update.download=Télécharger
+gui.update.later=Plus tard
+gui.update.open_failed=Impossible d'ouvrir le navigateur.
+
+# --- ERREURS UTILISATEUR (affichées aux joueurs) ---
+error.unknown=Une erreur inconnue s'est produite
+error.api=Erreur API : %s
+error.api.timeout=Timeout de l'API
+error.api.rate_limit=Limite de requetes atteinte
+error.api.invalid_key=Cle API invalide
+error.api.server_error=Erreur serveur API (500-599)
+error.api.client_error=Erreur client API (400-499)
+error.api.network_error=Erreur réseau lors de la connexion à l'API
+error.api.parsing_error=Erreur lors du traitement de la réponse API
+error.api.quota_exceeded=Quota API dépassé - Veuillez patienter
+error.api.service_unavailable=Service API temporairement indisponible
+error.config=Erreur de configuration : %s
+error.translation=Une erreur de traduction s'est produite
+error.ui=Erreur d'interface utilisateur : %s
+error.rendering=Erreur de rendu graphique : %s
+error.system=Erreur système : %s
+error.database=Erreur de base de données : %s
+
+# --- VALIDATION UTILISATEUR ---
+
+# --- MESSAGES DE TRADUCTION (montrés aux joueurs) ---
+translation.progress=Traduction en cours...
+translation.loading=Chargement...
+
+translation.command.missing_text=Aucun texte a traduire. Utilisation : /trs <texte>, /translate <texte> ou /trs msg <joueur> <texte>
+translation.command.recipient_not_found=Destinataire introuvable : %s. Le message n'a pas ete envoye.
+translation.error.empty=Erreur: Message vide
+translation.error.too_long=Erreur: Message trop long (maximum %d caracteres)
+translation.error.processing=Erreur lors du traitement de la traduction
+translation.error.general=Erreur de traduction
+
+# --- COMMANDES (interface utilisateur) ---
+command.trs_clear.success=Traduction supprimee du cache : %s
+command.trs_clear.not_available=Commande /trs-clear non disponible. Utilisez d'abord /trs
+command.trs_clear.no_translation=Aucune traduction recente trouvee
+command.trs_clear.failed=Echec de la suppression de la traduction
+command.trs_clear.error=Erreur lors de la suppression de la traduction
+command.error.general=Erreur lors de l'execution de la commande
+command.error.not_found=§cNon trouve : %s
+command.success=§aOperation reussie
+
+# --- COMMANDES JOUEURS CIBLES ---
+
+# --- INTERFACE UTILISATEUR ---
+gui.title=Configuration
+gui.back=Retour
+gui.language=Langue
+gui.language_description=Changer la langue de l'interface du mod
+gui.sign_translation=Traduction des panneaux
+gui.sign_translation_description=Activer/désactiver la traduction automatique des panneaux
+gui.click_to_toggle=Cliquez pour basculer
+
+# --- BOUTONS ---
+button.show=Afficher
+button.hide=Masquer
+button.clear=Effacer
+button.save=Save
+
+# --- MENU PRINCIPAL ---
+menu.title=MineGlot
+menu.cache_stats=Statistiques du cache
+menu.language=Langue
+menu.default_language=Langue par defaut
+menu.target_players=Cibles de traduction
+menu.model=Modele
+menu.configuration=Configuration
+menu.help=Aide
+menu.api_key=Cles API
+menu.github=GitHub
+menu.donate=Don
+
+# --- INTERFACE JOUEURS CIBLES ---
+target.title=Selectionner un joueur
+target.reset=Reinitialiser
+target.limit=Limite de joueurs atteinte
+target.remove=Cliquez sur un joueur pour le deselectionner
+gui.target.reset=Reinitialiser
+
+# --- RECHERCHE ---
+
+# --- CLES API ---
+api_key.title=Cles API
+api_key.please_wait=Veuillez patienter...
+api_key.testing=Test de la cle API en cours...
+api_key.save_success=Cle API enregistree avec succes
+api_key.save_error=Erreur: Echec de l'enregistrement de la cle API
+api_key.test_success=Cle API validee avec succes
+api_key.test_error=Erreur: Echec du test de la cle API
+api_key.cleared=Cle API effacee
+api_key.clear_error=Erreur: Echec de l'effacement de la cle API
+api_key.hold_to_clear=Maintenez pour effacer
+api.error.empty=Erreur: La cle API ne peut pas etre vide
+api.error.too_short=Erreur: La cle API est trop courte
+api.error.unsupported_engine=Erreur: Moteur d'IA non supporte
+api.error.invalid_format=Erreur: Format de cle API invalide
+
+# --- CACHE (messages visibles utilisateur uniquement) ---
+cache.title=Statistiques du Cache
+cache.clear=Vider le cache
+cache.clear_success=§aCache vide avec succes
+
+# --- SYSTEME DE LANGUES ---
+language.title=Langue
+language.default=Langue par defaut
+language.code=Code
+language.default_set=§aLangue par defaut : §e%s
+language.selected=§aLangue selectionnee : §e%s
+
+
+# --- SYSTEME DE MODELES ---
+model.title=Modele
+model.selected=§aModele selectionne : §e%s
+
+
+# --- SYSTEME DE CREDITS ---
+credits.title=Credits OpenAI
+
+
+# --- CONFIGURATION ---
+config.option.enabled=§aActive
+config.option.disabled=§cDesactive
+config.option_changed=§a%s : %s
+
+# --- SYSTEME D'AIDE ---
+help.title=Aide
+
+# --- COMMANDES DE LANGUE ---
+
+
+
+# --- INFORMATIONS AUTEUR ---
+author.title=Auteur
+
+# --- COMMANDES AUTEUR ---
+author.profile_banner=§8§m          §r §6§l· Auteur · MineGlot ·§r §8§m          §r
+author.profile_name=§7  §eNom §8┃ §f%s
+author.profile_username=§7  §eGitHub §8┃ §9%s
+author.profile_about_title=§7  §b§lÀ propos
+author.profile_about_line1=§7    §fDéveloppeur Minecraft Forge 1.8.9
+author.profile_about_line2=§7    §fCréateur de MineGlot — traduction IA en jeu
+author.profile_about_line3=§7    §fPassionné par les serveurs multilingues
+author.profile_footer=§8§m────────────────────────────────
+
+# ===============================================================================
+# Fin du Fichier de Langue MineGlot - INTERFACE UTILISATEUR UNIQUEMENT
+# ===============================================================================
+
+# --- GITHUB ---
+
+# --- CHAT TRANSLATION ---
+
+# --- SIGN TRANSLATION ---
+sign.label=Panneau
+sign.cooldown=Veuillez patienter avant de traduire ce panneau à nouveau.
+sign.empty=Ce panneau est vide.
+sign.translating=Traduction en cours: "%s"
+sign.failed=Traduction du panneau échouée.
+
+# --- TRANSLATION ERRORS ---
+translation.error.empty_result=Erreur: Traduction vide reçue
+
+# --- ALIAS JOUEURS CIBLES (pour unification GUI/commande) ---
+target.player_added=§aJoueur %s ajouté aux cibles
+target.player_removed=§cJoueur %s retiré des cibles
+player.not_found=§cJoueur non trouvé: %s
+target.already_targeted=§e%s est deja dans les cibles
+target.not_targeted=§e%s n'est pas dans les cibles
+target.add_failed=§cImpossible d'ajouter %s aux cibles
+target.remove_failed=§cImpossible de retirer %s des cibles
+target.list_cleared=§aListe vidée (%d joueurs)
+target.list_empty=§eAucun joueur ciblé
+
+# --- CLES VALIDATION / SERVICE (RUNTIME) ---
+chat.error.empty=Le message du chat ne peut pas être vide
+chat.error.too_long=Le message du chat est trop long
+command.error.player_only=Cette commande ne peut être utilisée que par un joueur
+command.technical_message=Détail technique : %s
+config.error.general=Erreur de configuration
+config.error.no_default_lang=Aucune langue par défaut configurée
+config.error.no_api_key=Aucune cle API configuree
+config.error.invalid_api_key=Cle API invalide
+conversation.error.too_long=Le message de conversation est trop long
+conversation.error.too_short=Le message de conversation est trop court
+db.error.empty=Le chemin de la base de données ne peut pas être vide
+engine.error.empty=Le nom du moteur ne peut pas être vide
+export.invalid_period=Periode invalide. Utilisez : daily, weekly ou monthly
+model.not_found=Modèle sélectionné introuvable
+player.error.bot_detected=Nom de joueur invalide (motif bot détecté)
+player.error.empty=Le nom de joueur ne peut pas être vide
+player.error.invalid_chars=Le nom de joueur contient des caractères invalides
+player.error.invalid_length=Le nom de joueur doit contenir entre 3 et 16 caracteres
+service.config_unavailable=Service de configuration indisponible
+service.dup=Service déjà enregistré
+service.empty=Le nom du service est vide
+service.null=Le service est nul
+service.unavailable=Service indisponible
+target.limit_reached=Limite de joueurs cibles atteinte
+
+# --- CACHE STATS (ajout pour cohérence avec en_US) ---
+cache.guava_format=§7Cache Guava : §e%d §7entrées
+cache.rocksdb_format=§7Cache RocksDB : §e%d §7entrées
+cache.success_rate_format=§7Taux de réussite : §e%.1f%%
+cache.memory_format=§7Mémoire utilisée : §e%.1f Mo
+cache.hit_miss_format=§7⚡ Hits : §a%d §7✘ Miss : §c%d
+cache.rocksdb_error=§cErreur lors de la récupération des statistiques RocksDB
+
+# --- CLES MANQUANTES (COMPLETUDE) ---
+cache.display_error=§cErreur lors de l'affichage des statistiques
+cache.service_unavailable=§cService de cache indisponible
+chat.selection_activated=§aMode de sélection activé pendant 30 secondes. Ouvrez le chat puis cliquez un message visible ou nouveau.
+chat.selection_deactivated=§cMode de sélection désactivé.
+chat.selection_ending=§e⚠ Le mode de sélection se termine dans 5 secondes...
+export.location=§7📁 Dossier : §e%s
+export.success=§a✅ Rapport exporté : §e%s

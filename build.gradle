@@ -1,0 +1,168 @@
+buildscript {
+    repositories {
+        maven { url = "https://plugins.gradle.org/m2/" }
+        maven { url = "https://maven.minecraftforge.net/" }
+        mavenCentral()
+        maven { url = "https://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT"
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.4"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "net.minecraftforge.gradle.forge"
+apply plugin: "com.github.johnrengelman.shadow"
+
+// Override des sources Java pour n'utiliser que le code du projet
+// et ignorer les sources décompilées générées dans build/sources/main/java
+sourceSets {
+    main {
+        java {
+            setSrcDirs(['src/main/java'])
+        }
+    }
+    // Désactiver le sourceSet API (ForgeGradle) si non utilisé pour éviter les warnings
+    api {
+        java.srcDirs = []
+        resources.srcDirs = []
+    }
+}
+
+group            = "fr.ntgitg.mineglot"
+archivesBaseName = "mineglot"
+version          = "1.0.2"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+    shadow
+    provided
+    compile.extendsFrom shadow
+    natives
+}
+
+repositories {
+    mavenCentral()
+    maven { name = "mojang";   url = "https://libraries.minecraft.net/" }
+    maven { name = "forge";    url = "https://maven.minecraftforge.net/" }
+    maven { name = "sonatype"; url = "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    /* --- Dépendances déjà dans Minecraft/Forge --- */
+    provided 'com.google.code.gson:gson:2.13.1'
+    provided 'com.google.guava:guava:30.1.1-jre'
+    provided 'org.apache.logging.log4j:log4j-core:2.17.1'
+    provided 'org.apache.logging.log4j:log4j-api:2.17.1'
+    provided 'org.apache.commons:commons-lang3:3.12.0'
+    provided 'commons-io:commons-io:2.20.0'
+    provided 'net.minecraft:launchwrapper:1.12'
+
+    /* --- Dépendances embarquées Java 8 --- */
+    compile 'org.apache.httpcomponents:httpclient:4.5.14'
+    shadow  'org.rocksdb:rocksdbjni:6.29.5'
+
+    /* Kotlin stdlib 1.6.21 (compatible Lingua 1.2.2 et Gradle 4.9) */
+    shadow  'org.jetbrains.kotlin:kotlin-stdlib:1.6.21'
+
+    /* Lingua + ICU + JTokkit (relocaté) */
+    shadow  'com.github.pemistahl:lingua:1.2.2'
+    shadow  'com.ibm.icu:icu4j:58.2'
+    shadow  'com.knuddels:jtokkit:1.1.0'   // Java 8 + module-info Java 16
+
+    /* Tests */
+    testCompile 'junit:junit:4.13.2'
+    testCompile 'org.mockito:mockito-core:4.11.0'
+}
+
+/* --- Extraction des natifs RocksDB --- */
+task extractModNatives(type: Copy) {
+    from {
+        configurations.shadow.collect { jarFile ->
+            // Extraire les natives seulement des JARs RocksDB
+            if (jarFile.name.contains('rocksdbjni')) {
+                zipTree(jarFile).matching {
+                    include '**/*.dll'
+                    include '**/*.so'
+                    include '**/*.dylib'
+                }
+            }
+        }.findAll { it != null }
+    }
+    into "${buildDir}/natives"
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+/* --- ShadowJar --- */
+jar {
+    classifier = "thin"
+}
+
+shadowJar {
+    classifier     = ""
+    configurations = [project.configurations.shadow]
+
+    /* Relocations */
+    relocate "com.github.pemistahl.lingua", "fr.ntgitg.mineglot.libs.lingua"
+    relocate "com.ibm.icu",                 "fr.ntgitg.mineglot.libs.icu"
+    relocate "com.knuddels.jtokkit",        "fr.ntgitg.mineglot.libs.jtokkit"
+
+    /* ⚠️ Ignorer les classes Java 9+/16 de JTokkit */
+    exclude 'module-info.class'
+    exclude 'META-INF/versions/**'
+
+    mergeServiceFiles()
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    zip64 true
+    preserveFileTimestamps = false
+}
+
+reobf {
+    shadowJar {}
+}
+
+/* --- Tâches Forge / build habituelles (inchangées) --- */
+minecraft {
+    version          = "1.8.9-11.15.1.2318-1.8.9"
+    runDir           = "run"
+    mappings         = "stable_22"
+    makeObfSourceJar = false
+
+    replace "@VERSION@", project.version
+    replaceIn "MineGlot.java"
+
+    clientJvmArgs += "-Djava.library.path=${buildDir}/natives"
+    clientRunArgs  += "--tweakClass net.minecraftforge.fml.common.launcher.FMLTweaker"
+    serverRunArgs  += "--tweakClass net.minecraftforge.fml.common.launcher.FMLServerTweaker"
+}
+
+task devJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = "dev"
+}
+
+task copyMod(type: Copy) {
+    dependsOn tasks.named("reobfShadowJar"), extractModNatives
+    from { shadowJar.archivePath }
+    into System.getenv('APPDATA')
+         ? "${System.getenv('APPDATA')}/.minecraft/mods"
+         : "${System.getProperty('user.home')}/.minecraft/mods"
+}
+
+task installMod {
+    dependsOn copyMod
+    group = "minecraft"
+    description = "Builds MineGlot and copies the mod jar into the local Minecraft mods directory."
+}
+
+build.dependsOn devJar, extractModNatives, tasks.named("reobfShadowJar")
+runClient.dependsOn extractModNatives
+runServer.dependsOn extractModNatives
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

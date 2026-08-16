@@ -1,0 +1,221 @@
+# ========================================
+# MINEGLOT - Minecraft Forge 1.8.9 Mod
+# ========================================
+
+# ========================================
+# FICHIERS IMPORTANTS À INCLURE
+# ========================================
+#INCLUDE ces fichiers importants pour GitHub :
+!gradle.properties
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
+!build.gradle
+!settings.gradle
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md
+!wiki/
+!src/
+!assets/
+!resources/
+
+# ========================================
+# FICHIERS LOCAUX (ne pas versionner)
+# ========================================
+preview/
+image mod/
+
+# ========================================
+# FICHIERS DE BUILD ET COMPILATION
+# ========================================
+# Gradle
+.gradle/
+build/
+out/
+bin/
+site/
+
+# ========================================
+# FICHIERS IDE
+# ========================================
+# Eclipse
+.settings/
+.metadata/
+.classpath
+.project
+*.launch
+
+# IntelliJ IDEA
+.idea/
+*.ipr
+*.iws
+*.iml
+
+# VS Code
+.vscode/
+
+# Cursor (configuration locale)
+.cursor/
+
+# Python virtualenv for docs
+.venv-docs/
+
+# ========================================
+# FICHIERS DE DÉVELOPPEMENT MINECRAFT
+# ========================================
+# Dossiers de développement Minecraft
+/run/
+/logs/
+/crash-reports/
+/saves/
+/config/
+/mods/
+/resources/
+/backups/
+
+# ========================================
+# FICHIERS TEMPORAIRES ET CACHE
+# ========================================
+# Fichiers temporaires
+*.tmp
+*.temp
+*.swp
+*.swo
+*.swn
+*.bak
+*.backup
+*.bak~
+
+# Logs
+*.log
+/logs/
+
+# Dumps Java
+*.hprof
+hs_err_*.log
+
+# ========================================
+# FICHIERS DE SAUVEGARDE LOCAUX
+# ========================================
+sauvegarde/
+sauv/
+
+# ========================================
+# FICHIERS DE CONFIGURATION LOCAUX
+# ========================================
+# Fichiers de configuration spécifiques à l'environnement
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+# ========================================
+# FICHIERS DE SÉCURITÉ
+# ========================================
+# Clés API et secrets (à ne jamais commiter)
+api-keys.properties
+secrets.properties
+*.key
+*.pem
+*.p12
+*.keystore
+
+# ========================================
+# FICHIERS DE DÉPENDANCES LOCALES
+# ========================================
+# Libs locales (si vous en avez)
+libs/
+local-libs/
+
+# ========================================
+# FICHIERS DE TEST
+# ========================================
+# Rapports de test
+test-results/
+reports/
+coverage/
+
+# ========================================
+# FICHIERS SYSTÈME
+# ========================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ========================================
+# FICHIERS DE PACKAGING
+# ========================================
+# Distributions
+dist/
+release/
+*.zip
+*.tar.gz
+*.jar
+
+# ========================================
+# FICHIERS DE DÉVELOPPEMENT AVANCÉ
+# ========================================
+# Profiling
+*.hprof
+*.dump
+
+# Debug
+debug/
+debug.log
+
+# ========================================
+# EXCLUSIONS SPÉCIFIQUES MINEGLOT
+# ========================================
+# Fichiers de cache de traduction
+translation-cache/
+lingua-cache/
+
+# Fichiers de configuration utilisateur
+user-config/
+player-data/
+
+# Fichiers de métriques et monitoring
+/metrics/
+/monitoring/
+
+# ========================================
+# RÈGLES FINALES
+# ========================================
+# Toujours inclure les fichiers de documentation
+!*.md
+!wiki/**/*
+
+# Toujours inclure les fichiers de configuration Gradle
+!gradle.properties
+!build.gradle
+!settings.gradle
+
+# Toujours inclure les wrappers Gradle
+!gradlew*
+!gradle/wrapper/*
+
+# Toujours inclure les ressources du mod
+!src/main/resources/**
+!assets/**
+
+# Toujours inclure les fichiers de licence
+!LICENSE*
+!COPYING*
+
+# Brouillons locaux (apres !*.md)
+Description.md
+
+# Ressources locales/non embarquees dans le mod
+/src/main/resources/assets/mineglot/screenshots/
+/src/main/resources/assets/mineglot/sounds/untitled*.ogg
