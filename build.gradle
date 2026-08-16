@@ -31,8 +31,8 @@ sourceSets {
 }
 
 group            = "fr.ntgitg.mineglot"
-archivesBaseName = "mineglot"
-version          = "1.0.2"
+archivesBaseName = "MineGlot"
+version          = "1.0.3"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
